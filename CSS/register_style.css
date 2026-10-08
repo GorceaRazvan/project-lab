@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Permite derularea în sus dacă elementul este mai mare decât ecranul */
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin: auto; /* Păstrează centrarea pe ecranele mari */
+}
+
+.card {
+    max-width: 550px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.card h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #38bdf8; 
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), select, textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.6);
+    color: #ffffff;
+    font-size: 15px;
+    padding: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):focus, select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+.two-col {
+    display: flex;
+    gap: 15px;
+}
+
+.two-col > div {
+    flex: 1;
+}
+
+.checkbox-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #38bdf8;
+    transform: scale(1.2);
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #e2e8f0;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(to right, #38bdf8, #2563eb);
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+}
+
+.btn.ghost {
+    background: transparent;
+    color: #cbd5e1;
+    border: 1px solid #475569;
+}
+
+.btn.ghost:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.login-link a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: #818cf8;
+}
+
+@media (max-width: 600px) {
+    .two-col {
+        flex-direction: column;
+        gap: 0;
+    }
+    .actions {
+        flex-direction: column;
+    }
+}
