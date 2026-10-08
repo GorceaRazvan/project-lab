@@ -1,0 +1,44 @@
+body {
+    /* Culoarea de fundal asortată cu nuanța imaginii UVT */
+    background-color: #0c0a3e; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column; /* Așază spinner-ul sub logo */
+    align-items: center;    /* Centrează elementele pe orizontală */
+}
+
+.logo {
+    width: 280px; /* Dimensiunea logo-ului; o poți ajusta */
+    height: auto;
+    margin-bottom: 40px; /* Spațiul dintre logo și spinner */
+}
+
+/* Stilul și animația pentru spinner */
+.loader {
+    border: 6px solid rgba(255, 255, 255, 0.1); /* Inel de bază semi-transparent */
+    border-top: 6px solid #ffffff; /* Partea albă care se rotește */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.2s linear infinite; /* Viteza de rotație */
+}
+
+/* Animația cheie care rotește spinner-ul la 360 de grade */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Adaugă la finalul fișierului loading_style.css */
+@media (max-width: 400px) {
+    .logo {
+        width: 200px;
+    }
+}
