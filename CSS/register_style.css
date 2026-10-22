@@ -9,7 +9,7 @@ html, body {
     color: #f8fafc;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Permite derularea în sus dacă elementul este mai mare decât ecranul */
+    align-items: flex-start; 
 }
 
 .page {
@@ -18,7 +18,7 @@ html, body {
     justify-content: center;
     padding: 40px 20px;
     box-sizing: border-box;
-    margin: auto; /* Păstrează centrarea pe ecranele mari */
+    margin: auto; 
 }
 
 .card {

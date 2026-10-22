@@ -9,7 +9,7 @@ body {
     height: 500px;
     min-height: 400px;
     background-color: #ffffff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Umbră pentru aspect de card */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .login-image {
@@ -28,7 +28,7 @@ body {
 
 .separator {
     width: 5px;
-    background-color: #3471B8; /* Linia despărțitoare */
+    background-color: #3471B8; 
 }
 
 .login-form {
@@ -96,7 +96,7 @@ body {
 .register-text a:hover {
     color: #024A76;
 }
-/* Adaugă la finalul fișierului login_style.css */
+
 @media (max-width: 768px) {
     .login-container {
         flex-direction: column;
@@ -105,11 +105,11 @@ body {
     }
     
     .login-image {
-        display: none; /* Ascundem imaginea pe mobil pentru a salva spațiu */
+        display: none; 
     }
     
     .separator {
-        display: none; /* Ascundem linia albastră */
+        display: none; 
     }
     
     .login-form {

@@ -3,15 +3,15 @@ let emailInput = document.getElementById("email");
 let passwordInput = document.getElementById("password");
 
 loginForm.addEventListener("submit", function(e) {
-    e.preventDefault(); // Oprește trimiterea formularului pentru a putea face validarea
+    e.preventDefault(); 
     
     const email = emailInput.value.trim();
     const password = passwordInput.value;
     
-    // Validare: nume.prenume urmat opțional de maxim 2 cifre @e-uvt.ro
+   
     const emailRegex = /^[a-zA-Z]+\.[a-zA-Z]+\d{0,2}@e-uvt\.ro$/;
     
-    // Validare: minim 7 caractere, litere mici, mari, cifre și caractere speciale
+    
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{7,}$/;
 
     if (!emailRegex.test(email)) {
@@ -24,7 +24,6 @@ loginForm.addEventListener("submit", function(e) {
         return;
     }
     
-    // Dacă trece validările, redirecționează către pagina home
     alert("Login reușit!");
     window.location.href = "home.html";
 });
