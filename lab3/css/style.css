@@ -1,0 +1,132 @@
+/* Stilizări generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-box {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* PASUL 1: CSS Selectors & Cascading Rules */
+/* Regula 1 */
+p.important {
+    color: blue;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+
+/* Regula 2 (Concurență) - Aceasta va câștiga deoarece este scrisă ulterior în CSS */
+p.important {
+    color: crimson;
+}
+
+/* PASUL 2: CSS Box Model */
+.card-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #333;
+    background-color: #e9ecef;
+}
+
+.card-a {
+    box-sizing: content-box;
+}
+
+.card-b {
+    box-sizing: border-box;
+}
+
+/* PASUL 3: Flexbox Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: #2c3e50;
+    padding: 15px 30px;
+}
+
+.navbar .brand {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* PASUL 4: CSS Grid Galerie 6 carduri */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 1rem;
+}
+
+.gallery-card {
+    background: #3498db;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* PASUL 5: Responsive Layout (Sidebar + Content) */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.sidebar {
+    background-color: #e2e8f0;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.main-content {
+    background-color: #edf2f7;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr 2fr;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator 3 - CSS & Responsive</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- PASUL 3: Flexbox Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="brand">BrandLogo</div>
+            <ul class="nav-links">
+                <li><a href="#ex1">Exercițiul 1</a></li>
+                <li><a href="#ex2">Exercițiul 2</a></li>
+                <li><a href="#ex4">Galerie Grid</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PASUL 1: CSS Selectors and Declarations -->
+        <section id="ex1" class="section-box">
+            <h2>Pasul 1. Selectori CSS și specificitate</h2>
+            <p class="important">An important paragraph</p>
+        </section>
+
+        <!-- PASUL 2: CSS Box Model -->
+        <section id="ex2" class="section-box">
+            <h2>Pasul 2. CSS Box Model</h2>
+            <div class="card-wrapper">
+                <div class="card card-a">
+                    <h3>Card A</h3>
+                    <p><code>box-sizing: content-box</code></p>
+                </div>
+                <div class="card card-b">
+                    <h3>Card B</h3>
+                    <p><code>box-sizing: border-box</code></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASUL 4: CSS Grid (Galerie 6 carduri) -->
+        <section id="ex4" class="section-box">
+            <h2>Pasul 4. CSS Grid: Galerie de 6 carduri</h2>
+            <div class="gallery">
+                <div class="gallery-card">Card 1</div>
+                <div class="gallery-card">Card 2</div>
+                <div class="gallery-card">Card 3</div>
+                <div class="gallery-card">Card 4</div>
+                <div class="gallery-card">Card 5</div>
+                <div class="gallery-card">Card 6</div>
+            </div>
+        </section>
+
+        <!-- PASUL 5: Responsive Layout (Sidebar + Main Content) -->
+        <section class="section-box">
+            <h2>Pasul 5. Layout Responsiv (Sidebar + Content)</h2>
+            <div class="layout">
+                <aside class="sidebar">
+                    <h3>Meniu Lateral</h3>
+                    <ul>
+                        <li>Opțiune 1</li>
+                        <li>Opțiune 2</li>
+                    </ul>
+                </aside>
+                <article class="main-content">
+                    <h3>Conținut Principal</h3>
+                    <p>Acest conținut se așază sub sidebar pe ecrane mici și pe 2 coloane pe ecrane de peste 768px.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
